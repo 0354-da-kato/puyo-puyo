@@ -74,5 +74,47 @@
       padding: 16px;
       border-radius: 16px;
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
-    }*
+    }
+    .panel h2 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      opacity: .85;
+      letter-spacing: .03em;
+    }
+    #score, #chain {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .help p {
+      margin: 6px 0;
+      opacity: .9;
+    }
+    .message {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--danger);
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: .03em;
+    }
+    .hidden { display: none; }
+    @media (max-width: 720px) {
+      .layout { grid-template-columns: 1fr; }
+      .panel { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    const COLS = 6;
+    const ROWS = 12;
+    const CELL = 32;
+    const COLORS = {
+      red:    { fill: '#ff2f4f', stroke: '#b11534', eye: '#1c1014', highlight: 'rgba(255,255,255,.66)', mouth: '#24060d' },
+      blue:   { fill: '#19d6ff', stroke: '#0c7ea7', eye: '#081b2c', highlight: 'rgba(255,255,255,.72)', mouth: '#061621' },
+      yellow: { fill: '#ffe14d', stroke: '#c28f08', eye: '#352700', highlight: 'rgba(255,255,255,.68)', mouth: '#4a3700' },
+      purple: { fill: '#*
 
